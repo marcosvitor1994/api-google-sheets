@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Sheets Fetch</title>
+  <script>
+    async function fetchData() {
+      try {
+        const response = await fetch('http://localhost:3000/getData');
+        if (!response.ok) {
+          throw new Error('Erro ao buscar dados do servidor');
+        }
+        const data = await response.json();
+        console.log('Dados recebidos:', data.values);
+        sessionStorage.setItem("data", JSON.stringify(data.values));
+      } catch (error) {
+        console.error('Erro:', error.message);
+      }
+    }
+
+    // Executar fetchData automaticamente ao carregar a página
+    document.addEventListener('DOMContentLoaded', fetchData);
+  </script>
+</head>
+<body>
+  <button onclick="fetchData()">Buscar Dados</button>
+</body>
+</html>
