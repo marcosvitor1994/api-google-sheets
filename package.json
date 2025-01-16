@@ -5,5 +5,10 @@
     "express": "^4.21.2",
     "googleapis": "^144.0.0",
     "react": "^19.0.0"
-  }
+  },
+  "scripts": {
+    "dev": "node ./connection.js",
+    "vercel-build": "npx prisma migrate deploy"
+  },
+  "main": "connection.js"
 }
