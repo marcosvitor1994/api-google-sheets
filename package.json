@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "node ./connection.js",
-    "build": "node connection.js"
+    "build": "node ./connection.js"
   },
   "main": "connection.js"
 }
