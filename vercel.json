@@ -8,9 +8,8 @@
     ],
     "routes":[
         {
-        "src": "/(.*)",
-        "dest": "/getData"       
+        "src": "/connection.js",
+        "dest": "./connection.js"        
         }
-    ],
-    "rewrites": [{ "src": "./connection.js", "destination": "/" }]
+    ]
 }
