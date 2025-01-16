@@ -36,7 +36,7 @@ app.get('/getData', async (req, res) => {
 
     res.json(response.data);
   } catch (error) {
-    res.status(500).json({ error: 'Erro ao buscar dados do Google Sheets', details: error.message });
+    res.status(500).json({ error: 'Erro ao buscar os dados do Google Sheets', details: error.message });
   }
 });
 
