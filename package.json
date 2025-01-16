@@ -3,12 +3,10 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "googleapis": "^144.0.0",
-    "react": "^19.0.0"
+    "googleapis": "^144.0.0"
   },
   "scripts": {
-    "dev": "node ./connection.js",
-    "build": "node ./connection.js"
+    "dev": "node ./connection.js"
   },
   "main": "connection.js"
 }

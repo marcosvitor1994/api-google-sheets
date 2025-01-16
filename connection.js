@@ -4,7 +4,7 @@ const cors = require('cors');
 const app = express();
 require("dotenv").config();
 
-app.use(cors()); // Permitir chamadas do front-end
+app.use(cors());
 
 const SERVICE_ACCOUNT_CREDENTIALS = {
   type: process.env.type,
@@ -33,19 +33,17 @@ app.get('/getData', async (req, res) => {
       spreadsheetId: '1k6ntEzHEHwfcWXsTL728zv797BbabDue0dZU6cq0QWw',
       range: 'GERAL',
     });
-
     res.json(response.data);
   } catch (error) {
     res.status(500).json({ error: 'Erro ao buscar os dados do Google Sheets', details: error.message });
   }
 });
 
-app.get('/', async (req, res) => {
+app.get('/', (req, res) => {
   res.status(200).json({
-    status: "Sucess",
-    msg: "Api Orquestra rodando!",
+    status: "Success",
+    msg: "Api Orquestra rodando!"
   });
 });
 
-const PORT = 3000;
-app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
+module.exports = app;  // Exporta o app para ser usado como função

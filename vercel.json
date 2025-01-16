@@ -1,15 +1,20 @@
 {
     "version": 2,
-    "builds":[
-        {
-        "src": "node ./connection.js",
+    "builds": [
+      {
+        "src": "connection.js",
         "use": "@vercel/node"
-        }
+      }
     ],
-    "routes":[
-        {
-        "src": "/connection.js",
-        "dest": "./connection.js"        
-        }
+    "routes": [
+      {
+        "src": "/getData",
+        "dest": "/connection.js"
+      },
+      {
+        "src": "/",
+        "dest": "/connection.js"
+      }
     ]
-}
+  }
+  
