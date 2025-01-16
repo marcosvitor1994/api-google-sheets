@@ -40,5 +40,14 @@ app.get('/getData', async (req, res) => {
   }
 });
 
+app.get('/', async (req, res) => {
+  try { 
+
+    res.json("teste de rota");
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao entrar /', details: error.message });
+  }
+});
+
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
