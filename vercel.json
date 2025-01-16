@@ -1,11 +1,5 @@
 {
-    "version": 2,
-    "builds":[
-        {
-        "src": "./connection.js",
-        "use": "@vercel/node"
-        }
-    ],
+    "version": 2,    
     "routes":[
         {
         "src": "/connection.js",
