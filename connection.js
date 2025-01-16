@@ -41,12 +41,10 @@ app.get('/getData', async (req, res) => {
 });
 
 app.get('/', async (req, res) => {
-  try { 
-
-    res.json("teste de rota");
-  } catch (error) {
-    res.status(500).json({ error: 'Erro ao entrar /', details: error.message });
-  }
+  res.status(200).json({
+    status: "Sucess",
+    msg: "Api Orquestra rodando!",
+  });
 });
 
 const PORT = 3000;
