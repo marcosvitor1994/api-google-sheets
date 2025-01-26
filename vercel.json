@@ -1,20 +1,47 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "connection.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/getData",
-        "dest": "/connection.js"
-      },
-      {
-        "src": "/",
-        "dest": "/connection.js"
-      }
-    ]
-  }
-  
+  "version": 2,
+  "builds": [
+    {
+      "src": "connection.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/connection.js"
+    },
+    {
+      "src": "/getData",
+      "dest": "/connection.js"
+    },
+    {
+      "src": "/getDataEngResumo",
+      "dest": "/connection.js"
+    },
+    {
+      "src": "/getDataEngResumoMensal",
+      "dest": "/connection.js"
+    },
+    {
+      "src": "/getDataEngGastoMaterial",
+      "dest": "/connection.js"
+    },
+    {
+      "src": "/getDataEngEquipamentos",
+      "dest": "/connection.js"
+    },
+    {
+      "src": "/getDataEngMaoObra",
+      "dest": "/connection.js"
+    },
+    {
+      "src": "/getDataEngCronograma",
+      "dest": "/connection.js"
+    },
+    {
+      "src": "/getDataEngInventario",
+      "dest": "/connection.js"
+    }
+  ]
+}
