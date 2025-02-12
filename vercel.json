@@ -42,6 +42,10 @@
     {
       "src": "/getDataEngInventario",
       "dest": "/connection.js"
+    },
+    {
+      "src": "/clientes_adriel",
+      "dest": "/connection.js"
     }
   ]
 }
