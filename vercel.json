@@ -44,6 +44,10 @@
       "dest": "/connection.js"
     },
     {
+      "src": "/produtos_nutrimentos_adriel",
+      "dest": "/connection.js"
+    },
+    {
       "src": "/clientes_adriel",
       "dest": "/connection.js"
     }
