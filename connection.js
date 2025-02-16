@@ -134,7 +134,17 @@ app.get('/clientes_adriel', async (req, res) => {
   }
 });
 
-
+app.get('/produtos_nutrimentos_adriel', async (req, res) => {
+  try {
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: '18qQpZbOuMIR3RieJ7TxM8z4xveUZ9R3jEUsWLCVAz7Q',
+      range: 'produtos_nutrimentos',
+    });
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao buscar os dados do Google Sheets', details: error.message });
+  }
+});
 
 
 
