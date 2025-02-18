@@ -52,7 +52,7 @@
       "dest": "/connection.js"
     },
     {
-      "src": "/clientes_adriel",
+      "src": "/historico_clientes_adriel",
       "dest": "/connection.js"
     }
   ]
