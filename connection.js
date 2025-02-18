@@ -122,7 +122,7 @@ app.get('/getDataEngInventario', async (req, res) => {
   }
 });
 
-app.get('/clientes_adriel', async (req, res) => {
+app.get('/historico_clientes_adriel', async (req, res) => {
   try {
     const response = await sheets.spreadsheets.values.get({
       spreadsheetId: '18qQpZbOuMIR3RieJ7TxM8z4xveUZ9R3jEUsWLCVAz7Q',
