@@ -52,6 +52,10 @@
       "dest": "/connection.js"
     },
     {
+      "src": "/produtos_racoes_adriel",
+      "dest": "/connection.js"
+    },
+    {
       "src": "/historico_clientes_adriel",
       "dest": "/connection.js"
     }
