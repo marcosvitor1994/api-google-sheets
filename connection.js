@@ -170,7 +170,17 @@ app.get('/clientes_adriel', async (req, res) => {
   }
 });
 
-
+app.get('/hospital', async (req, res) => {
+  try {
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: '1WAPtXLMaZds1-MLCFIYOsjOOEaIY2YfdF2GVQa-8aZ0',
+      range: 'base',
+    });
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao buscar os dados do Google Sheets', details: error.message });
+  }
+});
 
 app.get('/', (req, res) => {
   res.status(200).json({
