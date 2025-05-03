@@ -55,7 +55,6 @@
       "src": "/produtos_racoes_adriel",
       "dest": "/connection.js"
     },
-    ,
     {
       "src": "/hospital",
       "dest": "/connection.js"
