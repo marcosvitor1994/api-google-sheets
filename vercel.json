@@ -60,6 +60,10 @@
       "dest": "/connection.js"
     },
     {
+      "src": "/upa",
+      "dest": "/connection.js"
+    },
+    {
       "src": "/historico_clientes_adriel",
       "dest": "/connection.js"
     }
