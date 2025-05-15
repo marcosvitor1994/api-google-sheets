@@ -182,6 +182,18 @@ app.get('/hospital', async (req, res) => {
   }
 });
 
+app.get('/upa', async (req, res) => {
+  try {
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: '1o77RM51ua97DsnXT5KZzqjRSCI7QqWpiqmEMbj_yMK8',
+      range: 'base',
+    });
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao buscar os dados do Google Sheets', details: error.message });
+  }
+});
+
 app.get('/', (req, res) => {
   res.status(200).json({
     status: "Success",
