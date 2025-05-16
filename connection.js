@@ -185,8 +185,8 @@ app.get('/hospital', async (req, res) => {
 app.get('/upa', async (req, res) => {
   try {
     const response = await sheets.spreadsheets.values.get({
-      spreadsheetId: '1o77RM51ua97DsnXT5KZzqjRSCI7QqWpiqmEMbj_yMK8',
-      range: 'base',
+      spreadsheetId: '1k1Ve64LVBYnxUCLSTGgZidPDOz23FnDXnKsXrD-QgzQ',
+      range: 'Página1',
     });
     res.json(response.data);
   } catch (error) {
