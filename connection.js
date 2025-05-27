@@ -194,6 +194,18 @@ app.get('/upa', async (req, res) => {
   }
 });
 
+app.get('/ccbb', async (req, res) => {
+  try {
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: '1O_aS1D1x_BQFjyiApz1HoRO6eAxIs5rnrHE84A23aHs',
+      range: 'Dados Consolidados - CCBB Trabalho',
+    });
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao buscar os dados do Google Sheets', details: error.message });
+  }
+});
+
 app.get('/', (req, res) => {
   res.status(200).json({
     status: "Success",
