@@ -68,6 +68,10 @@
       "dest": "/connection.js"
     },
     {
+      "src": "/ShareCcbb",
+      "dest": "/connection.js"
+    },    
+    {
       "src": "/historico_clientes_adriel",
       "dest": "/connection.js"
     }
