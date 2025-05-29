@@ -72,6 +72,10 @@
       "dest": "/connection.js"
     },    
     {
+      "src": "/ccbbMeta",
+      "dest": "/connection.js"
+    },    
+    {
       "src": "/historico_clientes_adriel",
       "dest": "/connection.js"
     }
