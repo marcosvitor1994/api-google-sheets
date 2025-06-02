@@ -78,6 +78,18 @@
     {
       "src": "/historico_clientes_adriel",
       "dest": "/connection.js"
+    },    
+    {
+      "src": "/agenda",
+      "dest": "/connection.js"
+    },    
+    {
+      "src": "/cardiologia",
+      "dest": "/connection.js"
+    },    
+    {
+      "src": "/psiquiatria",
+      "dest": "/connection.js"
     }
   ]
 }
