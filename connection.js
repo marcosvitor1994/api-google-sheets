@@ -254,11 +254,35 @@ app.get('/psiquiatria', async (req, res) => {
   }
 });
 
-app.get('/agenda', async (req, res) => {
+app.get('/agenda/maio', async (req, res) => {
   try {
     const response = await sheets.spreadsheets.values.get({
       spreadsheetId: '1CoARWlLG_b_gdz6AiZ7aJYaXwZSKMoVRD9wEQcRFHqM',
       range: 'MAIO - 2025',
+    });
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao buscar os dados do Google Sheets', details: error.message });
+  }
+});
+
+app.get('/agenda/abril', async (req, res) => {
+  try {
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: '1CoARWlLG_b_gdz6AiZ7aJYaXwZSKMoVRD9wEQcRFHqM',
+      range: 'ABRIL - 2025',
+    });
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao buscar os dados do Google Sheets', details: error.message });
+  }
+});
+
+app.get('/agenda/junho', async (req, res) => {
+  try {
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: '1CoARWlLG_b_gdz6AiZ7aJYaXwZSKMoVRD9wEQcRFHqM',
+      range: 'JUNHO - 2025',
     });
     res.json(response.data);
   } catch (error) {
