@@ -80,7 +80,7 @@
       "dest": "/connection.js"
     },    
     {
-      "src": "/agenda",
+      "src": "/agenda/maio",
       "dest": "/connection.js"
     },    
     {
@@ -89,6 +89,14 @@
     },    
     {
       "src": "/psiquiatria",
+      "dest": "/connection.js"
+    },    
+    {
+      "src": "/agenda/abril",
+      "dest": "/connection.js"
+    },    
+    {
+      "src": "/agenda/junho",
       "dest": "/connection.js"
     }
   ]
