@@ -230,6 +230,43 @@ app.get('/ccbbMeta', async (req, res) => {
   }
 });
 
+app.get('/cardiologia', async (req, res) => {
+  try {
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: '1un3g23dPQfooLOvRWY7eHyvpwcJkCeDrcfW3I8NI0v0',
+      range: 'base',
+    });
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao buscar os dados do Google Sheets', details: error.message });
+  }
+});
+
+app.get('/psiquiatria', async (req, res) => {
+  try {
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: '1jFieAXFLHB_G_AylcbBE1yuz3o_iFUVqVon4bCvkI58',
+      range: 'base',
+    });
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao buscar os dados do Google Sheets', details: error.message });
+  }
+});
+
+app.get('/agenda', async (req, res) => {
+  try {
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: '1CoARWlLG_b_gdz6AiZ7aJYaXwZSKMoVRD9wEQcRFHqM',
+      range: 'MAIO - 2025',
+    });
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao buscar os dados do Google Sheets', details: error.message });
+  }
+});
+
+
 app.get('/', (req, res) => {
   res.status(200).json({
     status: "Success",
