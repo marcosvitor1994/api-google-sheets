@@ -290,6 +290,18 @@ app.get('/agenda/junho', async (req, res) => {
   }
 });
 
+app.get('/compilado_consultas', async (req, res) => {
+  try {
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: '1A7f76WrhE4_cPVl_onIRu1ecpITxKjYEEnq99fCkXlU',
+      range: 'base',
+    });
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao buscar os dados do Google Sheets', details: error.message });
+  }
+});
+
 
 app.get('/', (req, res) => {
   res.status(200).json({
