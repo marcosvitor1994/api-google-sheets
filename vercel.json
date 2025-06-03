@@ -98,6 +98,10 @@
     {
       "src": "/agenda/junho",
       "dest": "/connection.js"
-    }
+    },    
+    {
+      "src": "/compilado_consultas",
+      "dest": "/connection.js"
+    }    
   ]
 }
