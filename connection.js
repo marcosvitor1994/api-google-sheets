@@ -410,6 +410,18 @@ app.get('/cartao/ga4-completo', async (req, res) => {
   }
 });
 
+app.get('/cartao/ga4-source', async (req, res) => {
+  try {
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: '1Vb24X8JB1nVEEnEoPyi9ZgMlTafVr46XBv1IBnN7z1E',
+      range: 'GA4 - Source',
+    });
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao buscar os dados do Google Sheets', details: error.message });
+  }
+});
+
 app.get('/cartao/pinterest-imagem', async (req, res) => {
   try {
     const response = await sheets.spreadsheets.values.get({
