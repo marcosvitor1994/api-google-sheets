@@ -398,6 +398,18 @@ app.get('/cartao/pinterest', async (req, res) => {
   }
 });
 
+app.get('/cartao/pinterest-tratado', async (req, res) => {
+  try {
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: '1Vb24X8JB1nVEEnEoPyi9ZgMlTafVr46XBv1IBnN7z1E',
+      range: 'Pinterest - Tratado',
+    });
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao buscar os dados do Google Sheets', details: error.message });
+  }
+});
+
 app.get('/cartao/tiktok', async (req, res) => {
   try {
     const response = await sheets.spreadsheets.values.get({
