@@ -506,6 +506,54 @@ app.get('/cartao/off-line', async (req, res) => {
   }
 });
 
+app.get('/cartao/pontuacao/meta', async (req, res) => {
+  try {
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: '17YlnsAhumNQTlhPvmuqmeCaCNEOspQphIOZNUw9tLoM',
+      range: 'META',
+    });
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao buscar os dados do Google Sheets', details: error.message });
+  }
+});
+
+app.get('/cartao/pontuacao/tiktok', async (req, res) => {
+  try {
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: '17YlnsAhumNQTlhPvmuqmeCaCNEOspQphIOZNUw9tLoM',
+      range: 'TIKTOK',
+    });
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao buscar os dados do Google Sheets', details: error.message });
+  }
+});
+
+app.get('/cartao/pontuacao/pinterest', async (req, res) => {
+  try {
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: '17YlnsAhumNQTlhPvmuqmeCaCNEOspQphIOZNUw9tLoM',
+      range: 'PINTEREST',
+    });
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao buscar os dados do Google Sheets', details: error.message });
+  }
+});
+
+app.get('/cartao/pontuacao/linkedin', async (req, res) => {
+  try {
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: '17YlnsAhumNQTlhPvmuqmeCaCNEOspQphIOZNUw9tLoM',
+      range: 'LINKEDIN',
+    });
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao buscar os dados do Google Sheets', details: error.message });
+  }
+});
+
 app.get('/', (req, res) => {
   res.status(200).json({
     status: "Success",
