@@ -494,6 +494,18 @@ app.get('/cartao/pinterest-imagem', async (req, res) => {
   }
 });
 
+app.get('/cartao/off-line', async (req, res) => {
+  try {
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: '1Vb24X8JB1nVEEnEoPyi9ZgMlTafVr46XBv1IBnN7z1E',
+      range: 'Off',
+    });
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao buscar os dados do Google Sheets', details: error.message });
+  }
+});
+
 app.get('/', (req, res) => {
   res.status(200).json({
     status: "Success",
