@@ -554,6 +554,18 @@ app.get('/cartao/pontuacao/linkedin', async (req, res) => {
   }
 });
 
+app.get('/cartao/benchmark', async (req, res) => {
+  try {
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: '13VSsegy8p1P1dtpLvksYwaR2aYh1u84B_WDR0QnIXTY',
+      range: 'base',
+    });
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao buscar os dados do Google Sheets', details: error.message });
+  }
+});
+
 app.get('/', (req, res) => {
   res.status(200).json({
     status: "Success",
